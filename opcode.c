@@ -14,6 +14,7 @@ int execute(char **token, stack_t **stack, unsigned int line_num)
 
 	instruction_t op[] = {
 		{"pall", monty_pall},
+		{"pint", monty_pint},
 		{"null", NULL}
 	};
 
@@ -88,4 +89,22 @@ void monty_pall(stack_t **stack, unsigned int line_num)
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
 	}
+}
+/**
+ * monty_pint - A function that print the value at the top of stack
+ * @stack: pointer to stack list
+ * @line_number: current working line in monty bytecode
+ * Return: Nothing
+ */
+void monty_pint(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp = *stack;
+
+	if (!tmp)
+	{
+		f_errors(1, line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%d\n", tmp->n);
 }

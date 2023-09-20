@@ -1,6 +1,5 @@
 #include "monty.h"
 #include <stdio.h>
-
 /**
  * monty_run - A function that runs Monty Bytcodes Script
  * @fd: File descriptor for an open Monty Bytcode script
