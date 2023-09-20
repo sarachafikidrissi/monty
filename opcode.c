@@ -13,15 +13,12 @@ int execute(char **token, stack_t **stack, unsigned int line_num)
 	unsigned int i = 0;
 
 	instruction_t op[] = {
-		{"pall", monty_pall},
-		{"pint", monty_pint},
-		{"pop", monty_pop},
-		{"swap", monty_swap},
-		{"add", _add},
-		{"mod", _mod},
-		{"mul", _mul},
-		{"div", _div},
-		{"sub", _sub},
+		{"pall", monty_pall},{"pint", monty_pint},
+		{"pop", monty_pop},{"swap", monty_swap},
+		{"add", _add},{"mod", _mod},
+		{"mul", _mul},{"div", _div},
+		{"sub", _sub},{"pchar", _pchar},
+		{"pstr", _pstr},
 		{"null", NULL}
 	};
 
