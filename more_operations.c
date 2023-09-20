@@ -58,7 +58,7 @@ void _pstr(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * _rot - A fucntion that rotates the stack to the top.
+ * _rotl - A fucntion that rotates the stack to the top.
  * @stack: pointer to the top of stack list
  * @line_number: current working line
  * Return: Nothing
