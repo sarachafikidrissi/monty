@@ -16,6 +16,7 @@ int execute(char **token, stack_t **stack, unsigned int line_num)
 		{"pall", monty_pall},
 		{"pint", monty_pint},
 		{"pop", monty_pop},
+		{"swap", monty_swap},
 		{"null", NULL}
 	};
 

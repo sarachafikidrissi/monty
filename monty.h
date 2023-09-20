@@ -52,6 +52,7 @@ int monty_push(stack_t **stack, char **token, unsigned int line_num);
 void monty_pall(stack_t **stack, unsigned int line_num);
 void monty_pint(stack_t **stack, unsigned int line_number);
 void monty_pop(stack_t **stack, unsigned int line_number);
+void monty_swap(stack_t **stack, unsigned int line_number);
 
 void free_stack(stack_t **stack);
 
