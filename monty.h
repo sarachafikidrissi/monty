@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/stat.h>
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -36,7 +39,11 @@ int monty_push(stack_t **stack, char **token, unsigned int line_num);
 void monty_pall(stack_t **stack, unsigned int line_num);
 
 
+void free_stack(stack_t **stack);
 
+int usage_error(int flag);
+int open_error(char *filename);
+int f_errors(int flag, unsigned int line_num);
 
 
 /**
