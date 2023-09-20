@@ -10,10 +10,17 @@ int monty_run(FILE *fd)
 {
 	stack_t *stack = NULL;
 	char *line = NULL, **token = NULL, delim[] = " \n\t\a\b";
-	size_t len = 0, mode = 1;
+	size_t len = 100, mode = 1;
 	unsigned int line_num = 0, exit_status = EXIT_SUCCESS;
+	
+	line = (char *)malloc(len * sizeof(char));
 
-	while (getline(&line, &len, fd) != -1)
+	if (line == NULL)
+	{
+		perror("Error: malloc failed");
+		return (EXIT_FAILURE);
+	}
+	while (fgets(line, len, fd) != NULL)
 	{
 		line_num++;
 		if (empty_line(line, delim))
