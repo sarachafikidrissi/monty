@@ -1,6 +1,36 @@
 #include "monty.h"
 
 /**
+ * execute - a function that checks for command and execute
+ * function if there is a match
+ * @token: token containing opcode to execute
+ * @stack: doubly linked list representation of stack
+ * @line_num: Line number where the opcode was found
+ * Return: EXIT_SUCCESS on success, or EXIT_FAILURE on failure
+ */
+int execute(char **token, stack_t **stack, unsigned int line_num)
+{
+	unsigned int i = 0;
+
+	instruction_t op[] = {
+		{"pall", monty_pall},
+		{"null", NULL}
+	};
+
+	for (i = 0; i < 14; i++)
+	{
+		if (strcmp(op[i].opcode, token[0]) == 0)
+		{
+			op[i].f(stack, line_num);
+			return (EXIT_SUCCESS);
+		}
+	}
+	free_stack(stack);
+	fprintf(stderr, "L%i: unknown instruction %s\n", line_num, token[0]);
+	return (EXIT_FAILURE);
+}
+
+/**
  * monty_push - A function that insert an element to stack
  * @stack: pointer to stack struct
  * @token: pointer to command
