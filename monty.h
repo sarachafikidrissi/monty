@@ -54,6 +54,10 @@ void monty_pint(stack_t **stack, unsigned int line_number);
 void monty_pop(stack_t **stack, unsigned int line_number);
 void monty_swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_num);
+void _mul(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void _mod(stack_t **stack, unsigned int line_number);
 
 void free_stack(stack_t **stack);
 
