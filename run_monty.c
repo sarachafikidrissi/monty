@@ -12,7 +12,7 @@ int monty_run(FILE *fd)
 	char *line = NULL, **token = NULL, delim[] = " \n\t\a\b";
 	size_t len = 100, mode = 1;
 	unsigned int line_num = 0, exit_status = EXIT_SUCCESS;
-	
+
 	line = (char *)malloc(len * sizeof(char));
 
 	if (line == NULL)

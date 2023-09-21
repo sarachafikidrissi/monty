@@ -2,8 +2,8 @@
 
 /**
  * _add - A function that adds the top two elements of the stack.
- * @doubly: head of the linked list
- * @cline: line  number
+ * @stack: head of the linked list
+ * @line_number: current working line  number
  * Return: Nothing
  */
 void _add(stack_t **stack, unsigned int line_number)
