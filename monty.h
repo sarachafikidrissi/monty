@@ -62,6 +62,7 @@ void _pchar(stack_t **stack, unsigned int line_number);
 void _pstr(stack_t **stack, unsigned int line_number);
 void _rotl(stack_t **stack, unsigned int line_number);
 void _rotr(stack_t **stack, unsigned int line_number);
+int monty_queue(stack_t **stack, char **token, unsigned int line_num);
 
 
 

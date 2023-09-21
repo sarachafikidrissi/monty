@@ -37,6 +37,8 @@ int monty_run(FILE *fd)
 			mode = 0;
 		else if (strcmp(token[0], "push") == 0 && mode == 1)
 			exit_status = monty_push(&stack, token, line_num);
+		else if (strcmp(token[0], "push") == 0 && mode == 0)
+			exit_status = monty_queue(&stack, token, line_num);
 		else
 			exit_status = execute(token, &stack, line_num);
 		free(token);
